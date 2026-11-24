@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="SENA - Taller Localizacion">
+  <trk>
+    <name>Ruta de prueba Actividad 3</name>
+    <trkseg>
+      <trkpt lat="4.609710" lon="-74.081750">
+        <ele>2600</ele>
+        <time>2025-10-18T10:00:00Z</time>
+      </trkpt>
+      <trkpt lat="4.610100" lon="-74.081900">
+        <ele>2600</ele>
+        <time>2025-10-18T10:00:05Z</time>
+      </trkpt>
+      <trkpt lat="4.610500" lon="-74.082100">
+        <ele>2600</ele>
+        <time>2025-10-18T10:00:10Z</time>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>

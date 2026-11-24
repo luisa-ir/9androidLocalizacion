@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingHorizontal="16dp"
+    android:paddingVertical="8dp"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:id="@+id/contenedorMenuPrincipal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/txtTitulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Taller Localización Android"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:paddingBottom="24dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Selecciona una actividad para ingresar:"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:paddingBottom="16dp" />
+
+        <Button
+            android:id="@+id/btnActividad1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text="Actividad 1: Rastreo y Haversine" />
+
+        <Button
+            android:id="@+id/btnActividad2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text="Actividad 2: Geocerca y Notificación" />
+
+        <Button
+            android:id="@+id/btnActividad3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text="Actividad 3: Simulación GPX" />
+
+        <Button
+            android:id="@+id/btnActividad4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text="Actividad 4: Geocodificación Inversa" />
+
+        <Button
+            android:id="@+id/btnActividad5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Actividad 5: Configurar Precisión" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/contenedorDetalleActividad"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+
+        <Button
+            android:id="@+id/btnVolverMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text=" Volver al Menú Principal" />
+
+
+        <TextView
+            android:id="@+id/txtActividadActiva"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Detalle de Actividad"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#1976D2"
+            android:paddingBottom="8dp" />
+
+
+        <LinearLayout
+            android:id="@+id/panelActividad5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:paddingBottom="8dp">
+
+            <Button
+                android:id="@+id/btnAltaPrecision"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="4dp"
+                android:text="Alta Precisión (GPS)" />
+
+            <Button
+                android:id="@+id/btnAhorroBateria"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="4dp"
+                android:text="Ahorro Batería (Red)" />
+        </LinearLayout>
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/salida"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="13sp" />
+        </ScrollView>
+    </LinearLayout>
+
+</LinearLayout>
