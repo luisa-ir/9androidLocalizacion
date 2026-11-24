@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity(), LocationListener {
     private lateinit var proveedor: String
     private val PERMISO_LOCALIZACION = 1001
 
-    // 0: Ninguna (Menú principal visible), 1..5: Actividad en ejecución
+
     private var actividadSeleccionada: Int = 0
 
     private var ultimaUbicacion: Location? = null
@@ -93,17 +93,17 @@ class MainActivity : AppCompatActivity(), LocationListener {
 
         crearCanalNotificacion()
 
-        // Listeners menú principal
+
         btnActividad1.setOnClickListener { seleccionarActividad(1) }
         btnActividad2.setOnClickListener { seleccionarActividad(2) }
         btnActividad3.setOnClickListener { seleccionarActividad(3) }
         btnActividad4.setOnClickListener { seleccionarActividad(4) }
         btnActividad5.setOnClickListener { seleccionarActividad(5) }
 
-        // Listener botón volver
+
         btnVolverMenu.setOnClickListener { volverAlMenuPrincipal() }
 
-        // Manejo del botón atrás nativo del dispositivo
+
         onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
                 if (actividadSeleccionada != 0) {
@@ -176,7 +176,8 @@ class MainActivity : AppCompatActivity(), LocationListener {
             3 -> {
                 txtActividadActiva.text = "Actividad 3: Simulación de Movimiento GPX"
                 log("=== ACTIVIDAD 3: REGISTRO DE RUTA SIMULADA GPX ===")
-                log("Instrucciones: En el Emulador abre Extended Controls (...) -> Location -> Routes, carga el archivo GPX y haz clic en PLAY.")
+                log("Instrucciones: En el Emulador abre Extended Controls (...) " +
+                        "-> Location -> Routes, carga el archivo GPX y haz clic en PLAY.")
                 solicitarActualizaciones(2000L)
             }
             4 -> {
